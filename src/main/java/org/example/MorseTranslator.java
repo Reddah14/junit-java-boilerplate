@@ -36,3 +36,12 @@ public class MorseTranslator {
         alphabet.put('Y', "-.--");
         alphabet.put('Z', "--..");
     }
+
+    public String translateToMorse(String englishSentence) {
+        String translatedSentence = "";
+        for (int i = 0; i < englishSentence.length(); i++) {
+            translatedSentence += alphabet.get(englishSentence.toUpperCase().charAt(i));
+        }
+        return translatedSentence;
+    }
+}
